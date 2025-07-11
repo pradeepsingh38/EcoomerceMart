@@ -1,0 +1,9 @@
+.addBtn {
+  background-color: white;
+  width: 17%;
+  color: blue;
+}
+.addBtn:hover {
+  background-color: #0f3659;
+  color: white;
+}

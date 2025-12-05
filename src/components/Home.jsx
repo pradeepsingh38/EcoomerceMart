@@ -177,7 +177,7 @@ const Home = () => {
               <h4 className="text-white p-2">Contact Us</h4>
               <ul className="px-2 fw-semibold" style={{ listStyle: "none", color: "#7395BA", lineHeight: "35px" }}>
                 <li>70 Washington Square South, NY 10012, United States</li>
-                <li>Email: pradeep3802@gmail.com</li>
+                <li>Email: pradeep08@gmail.com</li>
                 <li>Phone: +91 9538450441</li>
               </ul>
             </div>

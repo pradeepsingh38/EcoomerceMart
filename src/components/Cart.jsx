@@ -203,8 +203,8 @@ const Footer = () => (
             }}
           >
             <li>70 Washington Square South, New York, NY 10012</li>
-            <li>Email: abhilash.vc888@gmail.com</li>
-            <li>Phone: +91 9538450441</li>
+            <li>Email: pradeep08@gmail.com</li>
+            <li>Phone: +91 6376110357</li>
           </ul>
         </div>
       </div>

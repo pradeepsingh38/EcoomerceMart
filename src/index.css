@@ -7,3 +7,14 @@
   background-color: #0f3659;
   color: white;
 }
+
+
+.footer-link {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-link:hover {
+  color: white;
+  padding-left: 5px;
+}

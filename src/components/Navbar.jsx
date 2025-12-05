@@ -25,7 +25,7 @@ const Navbar = () => {
                 aria-current="page"
                 to="/home"
               >
-                Home
+                Homess
               </Link>
 
               <Link

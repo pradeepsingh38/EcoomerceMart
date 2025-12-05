@@ -8,6 +8,8 @@ import { AiFillShopping } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add_to_cart } from "../redux/ActionCreator";
+import Footer from "./Footer";
+
 const Shop = () => {
   const dispatch = useDispatch();
   let arr1 = products.filter((ele) => {
@@ -194,87 +196,7 @@ const Shop = () => {
         </div>
       </div>
 
-      <div
-        className="d-flex flex-column justify-content-center"
-        style={{ height: "400px", backgroundColor: "#0F3460" }}
-      >
-        <div className="container">
-          <div className="row row-cols-4">
-            <div>
-              <h3 className="text-white fw-bold d-flex flex-wrap align-content-center p-2">
-                <span className="d-flex flex-wrap align-content-center">
-                  {<AiFillShopping />}
-                </span>
-                Mart
-              </h3>
-              <p
-                style={{ color: "#7395BA", lineHeight: "28px" }}
-                className="fw-semibold px-2"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                rutrum elementum diam, sed rhoncus lorem malesuada vitae.
-                Vestibulum vitae nulla massa. Cras vitae quam quam. Duis porta,
-                diam in.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-white p-2">About Us</h4>
-              <ul
-                style={{
-                  listStyle: "none",
-                  color: "#7395BA",
-                  lineHeight: "40px",
-                }}
-                className="px-2 fs-5 fw-semibold"
-              >
-                <li>Careers</li>
-                <li>Our Stores</li>
-                <li>Our Cares</li>
-                <li>Terms & Conditions</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white p-2">Customer Care</h4>
-              <ul
-                style={{
-                  listStyle: "none",
-                  color: "#7395BA",
-                  lineHeight: "40px",
-                }}
-                className="px-2 fs-5 fw-semibold"
-              >
-                <li>Help Center</li>
-                <li>How to Buy</li>
-                <li>Track Your Order</li>
-                <li>Corporate & Bulk Purchasing</li>
-                <li>Returns & Refunds</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white p-2">Contact Us</h4>
-              <ul
-                style={{
-                  listStyle: "none",
-                  color: "#7395BA",
-                  lineHeight: "35px",
-                  fontSize: "0.98em",
-                }}
-                className="px-2 fw-semibold"
-              >
-                <li>
-                  70 Washington Square South, New York, NY 10012, United States
-                </li>
-                <li>Email: abhilash.vc888@gmail.com</li>
-                <li>Phone: +919538450441</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer/>
     </>
   );
 };

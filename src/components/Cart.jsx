@@ -7,6 +7,8 @@ import {
   single_remove_to_cart,
 } from "../redux/ActionCreator";
 
+import Footer from "./Footer"
+
 const Cart = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.Product_Data.cartData);
@@ -142,74 +144,10 @@ const Cart = () => {
       </div>
 
       {/* Footer Section */}
-      <Footer />
+      <Footer/>
     </div>
   );
 };
 
-const Footer = () => (
-  <div
-    className="d-flex flex-column justify-content-center mt-5"
-    style={{ height: "400px", backgroundColor: "#0F3460" }}
-  >
-    <div className="container">
-      <div className="row row-cols-4">
-        <div>
-          <h3 className="text-white fw-bold d-flex p-2">
-            <AiFillShopping /> Mart
-          </h3>
-          <p style={{ color: "#7395BA", lineHeight: "28px" }} className="fw-semibold px-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          </p>
-        </div>
-
-        <div>
-          <h4 className="text-white p-2">About Us</h4>
-          <ul
-            className="px-2 fs-5 fw-semibold"
-            style={{ listStyle: "none", color: "#7395BA", lineHeight: "40px" }}
-          >
-            <li>Careers</li>
-            <li>Our Stores</li>
-            <li>Our Cares</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-white p-2">Customer Care</h4>
-          <ul
-            className="px-2 fs-5 fw-semibold"
-            style={{ listStyle: "none", color: "#7395BA", lineHeight: "40px" }}
-          >
-            <li>Help Center</li>
-            <li>How to Buy</li>
-            <li>Track Your Order</li>
-            <li>Corporate & Bulk Purchasing</li>
-            <li>Returns & Refunds</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-white p-2">Contact Us</h4>
-          <ul
-            className="px-2 fw-semibold"
-            style={{
-              listStyle: "none",
-              color: "#7395BA",
-              lineHeight: "35px",
-              fontSize: "0.98em",
-            }}
-          >
-            <li>70 Washington Square South, New York, NY 10012</li>
-            <li>Email: pradeep08@gmail.com</li>
-            <li>Phone: +91 6376110357</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 export default Cart;

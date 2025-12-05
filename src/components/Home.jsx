@@ -82,10 +82,30 @@ const Home = () => {
   <div className="row row-cols-4 g-4 p-4 h-100">
 
     {[
-      { icon: <FaCarRear />, bg: "#FDEFE6", title: "Free Shipping" },
-      { icon: <IoCard />, bg: "#CEEBE9", title: "Safe Payment" },
-      { icon: <FaShieldAlt />, bg: "#E4F2B4", title: "Secure Payment" },
-      { icon: <IoHeadset />, bg: "#D6E5FC", title: "Back Guarantee" },
+      {
+        icon: <FaCarRear />,
+        bg: "#FDEFE6",
+        title: "Free Shipping",
+        desc: "Get free delivery on all orders."
+      },
+      {
+        icon: <IoCard />,
+        bg: "#CEEBE9",
+        title: "Safe Payment",
+        desc: "100% secure and trusted checkout."
+      },
+      {
+        icon: <FaShieldAlt />,
+        bg: "#E4F2B4",
+        title: "Secure Payment",
+        desc: "Your data is protected."
+      },
+      {
+        icon: <IoHeadset />,
+        bg: "#D6E5FC",
+        title: "Back Guarantee",
+        desc: "30-day money-back guarantee."
+      },
     ].map((item, idx) => (
       <div className="col h-100 px-2 py-4" key={idx}>
         <div
@@ -98,17 +118,16 @@ const Home = () => {
             })}
           </div>
 
-          {/* Title */}
           <div className="fw-semibold fs-5">{item.title}</div>
 
-          {/* Description */}
-          <div>Lorem ipsum dolor sit amet.</div>
+          <div>{item.desc}</div>
         </div>
       </div>
     ))}
 
   </div>
 </div>
+
 
 
       {/* PRODUCTS SECTIONS */}

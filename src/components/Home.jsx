@@ -77,20 +77,39 @@ const Home = () => {
         </div>
       </div>
 
-      {/* SERVICE ICONS */}
-      <div className="container" style={{ height: "300px" }}>
-        <div className="row row-cols-4 g-4 p-4 h-100">
-          {[{ icon: <FaCarRear />, bg: "#FDEFE6" }, { icon: <IoCard />, bg: "#CEEBE9" }, { icon: <FaShieldAlt />, bg: "#E4F2B4" }, { icon: <IoHeadset />, bg: "#D6E5FC" }].map((item, idx) => (
-            <div className="col h-100 px-2 py-4" key={idx}>
-              <div className="border h-100 text-center d-flex flex-column justify-content-evenly" style={{ backgroundColor: item.bg }}>
-                <div>{React.cloneElement(item.icon, { className: "bg-white p-2 fs-1 rounded-circle" })}</div>
-                <div className="fw-semibold fs-5">Free Shipping</div>
-                <div>Lorem ipsum dolor sit amet.</div>
-              </div>
-            </div>
-          ))}
+     {/* SERVICE ICONS */}
+<div className="container" style={{ height: "300px" }}>
+  <div className="row row-cols-4 g-4 p-4 h-100">
+
+    {[
+      { icon: <FaCarRear />, bg: "#FDEFE6", title: "Free Shipping" },
+      { icon: <IoCard />, bg: "#CEEBE9", title: "Safe Payment" },
+      { icon: <FaShieldAlt />, bg: "#E4F2B4", title: "Secure Payment" },
+      { icon: <IoHeadset />, bg: "#D6E5FC", title: "Back Guarantee" },
+    ].map((item, idx) => (
+      <div className="col h-100 px-2 py-4" key={idx}>
+        <div
+          className="border h-100 text-center d-flex flex-column justify-content-evenly"
+          style={{ backgroundColor: item.bg }}
+        >
+          <div>
+            {React.cloneElement(item.icon, {
+              className: "bg-white p-2 fs-1 rounded-circle",
+            })}
+          </div>
+
+          {/* Title */}
+          <div className="fw-semibold fs-5">{item.title}</div>
+
+          {/* Description */}
+          <div>Lorem ipsum dolor sit amet.</div>
         </div>
       </div>
+    ))}
+
+  </div>
+</div>
+
 
       {/* PRODUCTS SECTIONS */}
       {[{ title: "Big Discount", products: discoutProducts }, { title: "New Arrival", products: newArrival }, { title: "Best Sales", products: bestSale }].map((section, idx) => (

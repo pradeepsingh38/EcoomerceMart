@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiFillShopping } from "react-icons/ai";
 import { RiContactsFill } from "react-icons/ri";
 import { BsFillCartCheckFill } from "react-icons/bs";
+import AuthModal from "./AuthModal";
+
 const Navbar = () => {
+    const [openModal, setOpenModal] = useState(false);
+
   return (
     <>
+      <AuthModal show={openModal} onClose={() => setOpenModal(false)} />
+
       <div className="container-fluid border p-2">
         <div className="d-flex justify-content-around flex-wrap align-content-center">
           <div>
@@ -13,11 +19,13 @@ const Navbar = () => {
               <span className="d-flex flex-column justify-content-center fs-3">
                 {<AiFillShopping />}
               </span>
+
               <div className="d-flex flex-wrap align-content-center">
                 <span className="fw-bold fs-3">Mart</span>
               </div>
             </div>
           </div>
+
           <div>
             <div className="d-flex justify-content-center">
               <Link
@@ -25,7 +33,7 @@ const Navbar = () => {
                 aria-current="page"
                 to="/home"
               >
-                Homess
+                Home
               </Link>
 
               <Link
@@ -42,11 +50,16 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
+
           <div>
             <div className="p-1">
-              <button className="me-3 btn btn-dark px-2 py-1">
+              <button
+                className="me-3 btn btn-dark px-2 py-1"
+                onClick={() => setOpenModal(true)}
+              >
                 {<RiContactsFill />}
               </button>
+
               <Link to="/cart" className="btn btn-dark  px-2 py-1">
                 {<BsFillCartCheckFill />}
               </Link>
